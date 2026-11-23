@@ -1,0 +1,14 @@
+C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\bin\Debug\net10.0\Console.exe
+C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\bin\Debug\net10.0\Console.deps.json
+C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\bin\Debug\net10.0\Console.runtimeconfig.json
+C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\bin\Debug\net10.0\Console.dll
+C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\bin\Debug\net10.0\Console.pdb
+C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\obj\Debug\net10.0\Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\obj\Debug\net10.0\Console.AssemblyInfoInputs.cache
+C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\obj\Debug\net10.0\Console.AssemblyInfo.cs
+C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\obj\Debug\net10.0\Console.csproj.CoreCompileInputs.cache
+C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\obj\Debug\net10.0\Console.dll
+C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\obj\Debug\net10.0\refint\Console.dll
+C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\obj\Debug\net10.0\Console.pdb
+C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\obj\Debug\net10.0\Console.genruntimeconfig.cache
+C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\obj\Debug\net10.0\ref\Console.dll
