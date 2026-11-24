@@ -12,3 +12,4 @@ C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPracti
 C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\obj\Debug\net10.0\Console.pdb
 C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\obj\Debug\net10.0\Console.genruntimeconfig.cache
 C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\obj\Debug\net10.0\ref\Console.dll
+C:\Users\mardin it\OneDrive\Desktop\.net projects\week6\lingPractice2\lingPractice\obj\Debug\net10.0\Console.sourcelink.json

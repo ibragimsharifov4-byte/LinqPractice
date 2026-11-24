@@ -346,29 +346,29 @@
 
 //PEOPLE AND CITIES (ClassTask)
 
-List<City> cities = new List<City>
-{
-    new City { Id = 1, Name = "Dushanbe" },
-    new City { Id = 2, Name = "Khujand" },
-    new City { Id = 3, Name = "Kulob" },
-    new City { Id = 4, Name = "Bokhtar" },
-    new City { Id = 5, Name = "Ayni" },
-    new City { Id = 6, Name = "Asht" }
-};
+// List<City> cities = new List<City>
+// {
+//     new City { Id = 1, Name = "Dushanbe" },
+//     new City { Id = 2, Name = "Khujand" },
+//     new City { Id = 3, Name = "Kulob" },
+//     new City { Id = 4, Name = "Bokhtar" },
+//     new City { Id = 5, Name = "Ayni" },
+//     new City { Id = 6, Name = "Asht" }
+// };
 
-List<Person> people = new List<Person>
-{
-    new Person { Id = 1, Name = "Ali", Age = 30, CityId = 1 },
-    new Person { Id = 2, Name = "Sofia", Age = 24, CityId = 2 },
-    new Person { Id = 3, Name = "Madina", Age = 28, CityId = 1 },
-    new Person { Id = 4, Name = "Alisher", Age = 5, CityId = 5 },
-    new Person { Id = 5, Name = "Umed", Age = 3, CityId = 5 },
-    new Person { Id = 6, Name = "Zarina", Age = 6, CityId = 6 },
-    new Person { Id = 7, Name = "Ibrohim", Age = 40, CityId = 3 },
-    new Person { Id = 8, Name = "Olim", Age = 28, CityId = 1 },
-    new Person { Id = 9, Name = "Amina", Age = 7, CityId = 1 },
-    new Person { Id = 10, Name = "Eldor", Age = 25, CityId = 4 }
-};
+// List<Person> people = new List<Person>
+// {
+//     new Person { Id = 1, Name = "Ali", Age = 30, CityId = 1 },
+//     new Person { Id = 2, Name = "Sofia", Age = 24, CityId = 2 },
+//     new Person { Id = 3, Name = "Madina", Age = 28, CityId = 1 },
+//     new Person { Id = 4, Name = "Alisher", Age = 5, CityId = 5 },
+//     new Person { Id = 5, Name = "Umed", Age = 3, CityId = 5 },
+//     new Person { Id = 6, Name = "Zarina", Age = 6, CityId = 6 },
+//     new Person { Id = 7, Name = "Ibrohim", Age = 40, CityId = 3 },
+//     new Person { Id = 8, Name = "Olim", Age = 28, CityId = 1 },
+//     new Person { Id = 9, Name = "Amina", Age = 7, CityId = 1 },
+//     new Person { Id = 10, Name = "Eldor", Age = 25, CityId = 4 }
+// };
 
 //1
 // var result = people.Where(p => p.Age > 25).Select(p => new { p.Name, p.Age });
@@ -730,3 +730,207 @@ List<Enrollment> enrollments = new List<Enrollment>
 // {
 //     Console.WriteLine(title);
 // }
+
+
+//1
+// var prs = people.Where(x => x.Age > 30).Select(x => x.Name);
+// foreach (var item in prs)
+// {
+//     System.Console.WriteLine(item);
+// }
+
+
+//2
+// var prs = people.GroupBy(x => x.Age).Select(g => new{Age = g.Key , Count = g.Count()}).OrderBy(x => x.Age).ToList();
+// foreach (var item in prs)
+// {
+//     System.Console.WriteLine(item);
+// }
+
+
+//3
+// var prs = people.OrderByDescending(x => x.Age).Select(g =>g.Name).Take(5);
+// foreach (var item in prs)
+// {
+//     System.Console.WriteLine(item);
+// }
+
+
+//4
+// List<int> ints = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+// var tt = ints.AsParallel().AsOrdered().Where(IsPrime).ToList();
+
+// foreach (var item in tt)
+// {
+//     Console.WriteLine(item);
+// }
+
+// static bool IsPrime(int n)
+// {
+//     int cnt = 0;
+//     for (int i = 1; i <= n; i++)
+//     {
+//         if (n % i == 0)
+//         {
+//             cnt++;
+//         }
+//     }
+//     return cnt == 2;
+// }
+
+
+//5
+// var cars = new List<Car>
+// {
+//     new Car { Brand = "Toyota", Model = "Camry", Year = 2020 },
+//     new Car { Brand = "BMW", Model = "X5", Year = 2021 },
+//     new Car { Brand = "Kia", Model = "Rio", Year = 2020 },
+//     new Car { Brand = "Audi", Model = "A6", Year = 2021 }
+// };
+// var result = cars
+//     .AsParallel()
+//     .GroupBy(car => car.Year)
+//     .Select(g => new { Year = g.Key, Count = g.Count() })
+//     .OrderBy(x => x.Year);
+
+// foreach (var item in result)
+// {
+//     Console.WriteLine($"{item.Year}: {item.Count} авто");
+// }
+
+
+//LINQ & PLINQ HOMETASK
+
+
+//1
+var nums1 = new List<int> { 3, 1, 4, 1, 5, 9, 2, 6 };
+var sorted1 = nums1.OrderBy(x => x).ToList();
+int cnt1 = sorted1.Count();
+double median1;
+if (cnt1 % 2 == 0)
+{
+    median1 = new List<int> { sorted1.ElementAt(cnt1 / 2 - 1), sorted1.ElementAt(cnt1 / 2) }.Average();
+}
+else
+{
+    median1 = sorted1.ElementAt(cnt1 / 2);
+}
+System.Console.WriteLine(median1);
+
+
+//2
+var a2 = new List<int> { 1, 2, 3, 4 };
+var b2 = new List<int> { 2, 3, 5, 6 };
+var c2 = new List<int> { 2, 3, 7, 8 };
+var common2 = a2.Intersect(b2).Intersect(c2);
+foreach (var item in common2)
+{
+    System.Console.WriteLine(item);
+}
+
+
+//3
+var nums3 = new List<int> { 1, 2, 3, 1, 2, 5, 6 };
+var runs3 = nums3.Aggregate(new List<List<int>>(), (acc, x) =>
+{
+    if (acc.Count > 0 && acc[^1][^1] < x)
+    {
+        acc[^1].Add(x);
+    }
+    else
+    {
+        acc.Add(new List<int> { x });
+    }
+    return acc;
+});
+var best3 = runs3.OrderByDescending(r => r.Count).First();
+System.Console.WriteLine(best3.Sum());
+
+
+//4
+var items4 = new List<string> { "a", "b", "a", "c", "b", "a" };
+int n4 = 2;
+var top4 = items4
+    .AsParallel()
+    .GroupBy(x => x)
+    .OrderByDescending(g => g.Count())
+    .ThenBy(g => g.Key)
+    .Take(n4)
+    .Select(g => new { g.Key, Count = g.Count() });
+foreach (var t in top4)
+{
+    System.Console.WriteLine($"{t.Key} (x{t.Count})");
+}
+
+
+//5
+var books5 = new List<Book>
+{
+    new Book { Title = "C#", Author = "Albahari" },
+    new Book { Title = "C#", Author = "Albahari" },
+    new Book { Title = "LINQ", Author = "Rattz" }
+};
+var unique5 = books5
+    .GroupBy(b => new { b.Title, b.Author })
+    .Select(g => g.First());
+foreach (var bk in unique5)
+{
+    System.Console.WriteLine($"{bk.Title} - {bk.Author}");
+}
+
+
+//6
+var nums6 = new List<int> { 1, 5, 12, 7, 3, 9 };
+int min6 = 4;
+int max6 = 10;
+var result6 = nums6.Where(x => x >= min6 && x <= max6);
+foreach (var item in result6)
+{
+    System.Console.WriteLine(item);
+}
+
+
+//7
+int threshold7 = 25;
+var split7 = students
+    .Select(s => new { s.Name, Age = DateTime.Now.Year - s.DateOfBirth.Year })
+    .ToLookup(x => x.Age > threshold7);
+System.Console.WriteLine("Older:");
+foreach (var item in split7[true])
+{
+    System.Console.WriteLine($"{item.Name} {item.Age}");
+}
+System.Console.WriteLine($"<= {threshold7}:");
+foreach (var item in split7[false])
+{
+    System.Console.WriteLine($"{item.Name} {item.Age}");
+}
+
+
+//8
+var nums8 = new List<int> { 1, 2, 2, 3, 3, 3, 4 };
+int n8 = 2;
+var result8 = nums8
+    .GroupBy(x => x)
+    .Where(g => g.Count() == n8)
+    .Select(g => g.Key);
+foreach (var item in result8)
+{
+    System.Console.WriteLine(item);
+}
+
+
+//9
+var words9 = new List<string> { "cat", "elephant", "ox", "dog" };
+var longest9 = words9.OrderByDescending(w => w.Length).First();
+System.Console.WriteLine(longest9);
+
+
+//10
+var nums10 = new List<int> { 199, 200, 155, 1999 };
+var best10 = nums10
+    .AsParallel()
+    .Select(x => new { Number = x, Sum = x.ToString().Sum(ch => ch - '0') })
+    .OrderByDescending(x => x.Sum)
+    .First();
+System.Console.WriteLine($"{best10.Number} - {best10.Sum}");
